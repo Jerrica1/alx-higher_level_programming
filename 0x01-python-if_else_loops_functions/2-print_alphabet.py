@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-number = 97
-while number < 123:
-    print("{:s}".format(chr(number)), end='')
-    number += 1
+# 2-print_alphabet.py
+# Jerrica Jackson <jerricajackson93@outlook.com>
+
+"""Print the alphabet in lowercase, not followed by a new line."""
+for letter in range(97, 123):
+    print("{}".format(chr(letter)), end="")

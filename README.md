@@ -1,96 +1,58 @@
-# Python - Hello, World
+# alx-higher_level_programming
 
-In this project, I began practicing using the interpreter, printing text
-and variables, and indexing and slicing strings in Python.
+*INTRODUCTION*
 
-## Tests :heavy_check_mark:
+Entering the exciting world of High Level Programming, where we experience strong
+ abstraction hence shorter programs. What's even more exciting is the use of an
+ interpretor.
 
-* [tests](./tests): Folder of test files. Provided by Holberton School.
+ This repository contains programs written in Python, C and Shell.
 
-## Function Prototypes :floppy_disk:
+*PROJECTS*
 
-Prototypes for functions written in this project:
+## 1. 0x00-python-hello_world
 
-| File			     | Prototype |
-| -------------------------- | ----------------------------------- |
-| `10-check_cycle.c`         | `int check_cycle(listint_t *list);` |
-| `102-magic_calculation.py` | `def magic_calculation(a, b):`      |
+Getting started with Python. Formating output and string manipulation.
 
-## Tasks :page_with_curl:
+## 2. 0x01-python-if_else_loops_functions
 
-* **0. Run Python File**
- * [0-run](./0-run): Bash script that runs a Python script file saved
- in the environment variable `$PYFILE`.
+Loops and flow control using if...else. Functions in python are also introduced here.
 
-* **1. Run inline**
- * [1-run_inline](./1-run_inline): Bash script that runs Python code saved in the
-environment variable `$PYCODE`.
+## 3. 0x02-python-import_modules
 
-* **2. Hello, print**
- * [2-print.py](./2-print.py): Python script that prints exactly `"Programming is
-like building a multilingual puzzle`, followed by a new line using the function `print`.
+Python modules enhance code reusability. This project explains how modules are created and used to write python scripts.
 
-* **3. Print integer**
- * [3-print_number.py](./3-print_number.py): Python script that prints the integer stored
-in the variable `number`, followed by `Battery street`, followed by a new line.
- * Completion of [this source code](https://github.com/Jerrica1/alx-higher_level_programming/blob/main/0x00-python-hello-world/3-print_number.py).
+## 4. 0x03-python-data_structures
 
-* **4. Print float**
-  * [4-print_float.py](./4-print_float.py): Python script that prints the float stored
-  in the variable `number` with a precision of two digits.
-  * Completion of [this source code](https://github.com/Jerrica1/alx-higher_level_programming/blob/main/0x00-python-hello-world/4-print_float.py).
+Python supports a number of data structures. These include lists, stacks queues, tuples.
 
-* **5. Print string**
-  * [5-print_string,py](./5-print_string.py): Python script that prints a string stored
-  in the variable `str` three times, then a new line, then the first nine characters
-  contained in `str`, followed by another new line.
-  * Completion of [this source code](https://github.com/Jerrica1/alx-higher_level_programming/blob/main/0x00-python-hello-world/5-print_string.py).
+## 5. 0x04-python-more_data_structures
 
-* **6. Play with strings**
-  * [6-concat.py](./6-concat.py): Python script that prints `Welcome to Holberton
-  School!` and `str2 = "School"`.
-  * Completion of [this source code](https://github.com/Jerrica1/alx-higher_level_programming/blob/main/0x00-python-hello-world/6-concat.py).
+More data structures in python are sets and dictionaries. In built function introduced here include map, filter, lambda anonymous functions.
 
-* **7. Copy - Cut - Paste**
-  * [7-edges.py](./7-edges.py): Python script that sets three string variables based
-  on the string contained in the variable `word` as follows:
-  * `word_first_3`: Contains the first three letters of the variable `word`.
-  * `word_last_2` : Contains the last two letters of the variable `word`.
-  * `middle_word` : Contains the value of the variale `word` without the first and last letters.
-  * Completion of [this source code](https://github.com/Jerrica1/alx-higher_level_programming/blob/main/0x00-python-hello-world/7-edges.py).
+## 6. 0x05-python-exceptions
 
-* **8. Create a new sentence**
-  * [8-concat_edges.py](./8-concat_edges.py): Python script that prints `object-oriented
-  programming with Python`, followed by a new line without creating new variables or
-  string literals.
-  * Completion of [this source code](https://github.com/Jerrica1/alx-higher_level_programming/blob/main/0x00-python-hello-world/8-concat_edges.py).
+An exception is an error detected during execution. Python offers a variety of builtin exceptions and also allows for custom exceptions.
 
-* **9. Easter Egg**
-  * [9-easter_egg.py](./9-easter_egg.py): Python script that prints "The Zen of Python" by
-  Tim Peters, followed by a new line.
+## 7. 0x06-python_classes
 
-* **10. Linked list cycle**
-  * [10-check_cycle.c](./10-check_cycle.c): C function that checks if a linked list
-  contains a cycle.
-  * Returns `0` if there is no cycle and `1` if there is.
-  * Helper files:
-   * [linked_lists.c](./linked_lists.c): C functions handling linked lists for testing
-   [10-check_cycle.c](./10-check_cycle.c)(provided by Holberton School).
-   * [lists.h](./lists.h): Header file containing definitions and prototypes for
-   all types and functions used in [linked_lists.c](./linked_lists.c) and
-   [10-check_cycle.c](./10-check_cycle.c).
+Object Oriented Programming is a way of organizing a program such that the data and functionality are put together to make an object. 
+An object is an instance of a class whereby the class defines the layout of te object in terms of the attributes and methods.
+Python like any other OOP Language, supports the four main concepts of OOP. These are: Data Encapsulation, Data Abstraction, Inheritance and Polymorphism.
 
-* **11. Hello, write**
-  * [100-write.py](./100-write.py): Python script that prints exactly `and that piece of
-  art is useful - Dora Korpar, 2015-10-19`, followed by a new line to `stderr` using
-  the function `write` from the `sys` module.
-  * Exits with a status code of `1`.
+## 8. 0x07-python-test_driven_development
 
-* **12. Compile**
-  * [101-compile](./101-compile): Python script that compiles a Python script file stored
-  in the environment variable `$PYFILE` and saves it to an output file
-  `$PYFILEc` (ex. `export PYFILE=my_main.py` => output filename: `my_main.pyc`).
+Test driven development involves coming up with tests for a certain program before writing the actual program. Python has made this possible through the *doctest* module. 
+The *doctest* module searches or pieces of text that lok like interactive Pythonn sessions and then executes those sessions to verify tay work exactly as shown. 
 
-* **13. ByteCode -> Python #1**
-  * [102-magic_calculation.py): Python function matching exactly
-  a bytecode provided by Holberton School.
+## 9. 0x08-python-more_classes
+
+More class example tasks in Python.
+
+## 10. 0x09-python-everything_is_object
+
+Python works differently with different types of objects. It is necessary to understand the reason why this is so.
+
+## 11. 0x0A-python-inheritance
+
+Just like any other object oriented programming language, Python also has class inheritance.

@@ -31,6 +31,11 @@ def roman_to_int(roman_string):
                     temp[idx:idx + 2] = [''.join(temp[idx:idx + 2])]
             except IndexError:
                 pass
+            try:
+                if temp[idx] == 'I' and temp[idx + 1] == 'X':
+                    temp[idx:idx + 2] = [''.join(temp[idx:idx + 2])]
+            except IndexError:
+                pass
             idx += 1
     # Search in dict for correct numbers and add
     for k, v in r_dict.items():

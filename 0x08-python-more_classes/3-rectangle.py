@@ -78,7 +78,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Returns area of a rectangle of a given `width` and `height`
+        """Returns area of a rectangle of a given `width` and `height`.
 
         Attributes:
             __width (int): horizontal dimension of rectangle
@@ -127,7 +127,7 @@ class Rectangle:
                 str += '#'
             if self.__width != 0 and row < (self.__height - 1):
                 str += '\n'
-            return str
+        return str
 
     def __str__(self):
         """Allows direct printing of instances.

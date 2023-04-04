@@ -127,7 +127,7 @@ class Rectangle:
                 str += '#'
             if self.__width != 0 and row < (self.__height - 1):
                 str += '\n'
-            return str
+        return str
 
     def __str__(self):
         """Allows direct printing of instances.

@@ -136,7 +136,6 @@ class Rectangle:
             The output of _draw_rectangle, which creates a string
         representation of the rectangle sutiable for printing.
 
-
         """
         return self._draw_rectangle()
 

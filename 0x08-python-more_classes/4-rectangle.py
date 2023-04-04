@@ -34,7 +34,7 @@ class Rectangle:
         """Args:
             value (int): horizontal dimension of rectangle
 
-        Attribute:
+        Attributes:
             __width (int): horizontal dimension of rectangle
 
         Raises:

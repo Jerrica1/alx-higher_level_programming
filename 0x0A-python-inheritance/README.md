@@ -69,7 +69,7 @@ for my learning in Holberton School
 
 ## Authors
 
----Jerrica Jackson  944@holbertonshcool.com                                    
+---Jerrica Jackson  jerricajackson93@outlook.com                                    
                                                                                
 ## Files
 

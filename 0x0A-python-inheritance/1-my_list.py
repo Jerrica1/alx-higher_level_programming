@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-'''Module for MyList class.'''
+"""
+MyList class module.
+Define MyList class.
+"""
 
 
 class MyList(list):
-    '''Custom MyList class.'''
+    """Define a MyList."""
+
     def print_sorted(self):
-        '''Method for printing sorted list.'''
+        """Print the list sorted"""
         print(sorted(self))

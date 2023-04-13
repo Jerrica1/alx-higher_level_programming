@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+
+Author: Jerrica Jackson
+
 """This adds all arguments to a Python list and save them to a file."""
 import sys
 

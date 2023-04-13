@@ -1,15 +1,17 @@
 #!/usr/bin/python3
 """
-write_file function module.
-Define write_file function.
+    function that writes a string to a text file (UTF8)
+    and returns the number of characters written:
+    Prototype: def write_file(filename="", text=""):
+    You must use the with statement
+    You don’t need to manage file permission exceptions.
+    Your function should create the file if doesn’t exist.
+    Your function should overwrite the content of the file
+    if it already exists.
 """
 
 
 def write_file(filename="", text=""):
-    """Writes a string to a text file (UTF8).
-    filename (str): the file, must have permissions, will create if nonexist.
-    text (str): text, will overwrite content of file if already exists.
-    Returns: the number of characters written.
-    """
-    with open(filename, 'w', encoding="UTF-8") as myfile:
-        return myfile.write(text)
+    """ write string to a file """
+    with open(filename, mode="w", encoding='utf-8') as file:
+        return (file.write(text))

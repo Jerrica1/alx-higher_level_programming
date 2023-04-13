@@ -1,28 +1,37 @@
 #!/usr/bin/python3
-"""
-    class Student that defines a student by:
-    Public instance attributes:
-        first_name
-        last_name
-        age
-    Instantiation with first_name, last_name and age:
-    def __init__(self, first_name, last_name, age):
-    Public method def to_json(self): that retrieves a
-    dictionary representation of a Student instance
-    (same as 10-class_to_json.py)
-    You are not allowed to import any module
-"""
+"""It defines a class Student."""
 
 
 class Student:
-    """ class to create a dict obj """
+    """It represents a student."""
 
     def __init__(self, first_name, last_name, age):
-        """ initialization for Student object """
-        self.age = age
-        self.last_name = last_name
+        """It initialize a new Student.
+        Args:
+            first_name (str): This is the first name of the student.
+            last_name (str): The last name of the student.
+            age (int): This is the age of the student.
+        """
         self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
-    def to_json(self):
-        """ retrieves a dictionary representation """
+    def to_json(self, attrs=None):
+        """This gets a dictionary representation of the Student.
+        If attrs is a list of strings, represents only those attributes
+        included in the list.
+        Args:
+            attrs (list): (Optional) This is the attributes to represent.
+        """
+        if (type(attrs) == list and
+                all(type(ele) == str for ele in attrs)):
+            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
+
+    def reload_from_json(self, json):
+        """This replaces all attributes of the Student.
+        Args:
+            json (dict): This is the key/value pairs to replace attributes with.
+        """
+        for k, v in json.items():
+            setattr(self, k, v)

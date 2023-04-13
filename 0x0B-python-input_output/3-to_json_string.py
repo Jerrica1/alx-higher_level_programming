@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-'''Module for is_kind_of_class method.'''
+"""This defines a string-to-JSON function."""
+import json
 
 
-def is_kind_of_class(obj, a_class):
-    '''Determines if an object is a subclass of a class.'''
-    return isinstance(obj, a_class)
+def to_json_string(my_obj):
+    """This returns the JSON representation of a string object."""
+    return json.dumps(my_obj)

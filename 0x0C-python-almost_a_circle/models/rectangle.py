@@ -5,7 +5,7 @@ File: rectangle.py
 Desc: This module contains a class called Rectangle that
       inherits from the Base class in the base.py module.
 Author: Jerrica Jackson
-Date Created: Aug 6 2022
+Date Created: April 15 2023
 """
 from models.base import Base as B
 

@@ -6,7 +6,7 @@ Desc: This modlue contains a class called Square that
       inherits from the Recatangle class in the rectangle
       module.
 Author: Jerrica Jackson
-Date Created: Aug 7 2022
+Date Created: April 15 2023
 """
 from models.rectangle import Rectangle as R
 

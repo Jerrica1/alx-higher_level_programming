@@ -5,7 +5,7 @@ File: square.py
 Desc: This modlue contains a class called Square that
       inherits from the Recatangle class in the rectangle
       module.
-Author: Gizachew Bayness (Elec Crazy)
+Author: Jerrica Jackson
 Date Created: Aug 7 2022
 """
 from models.rectangle import Rectangle as R

@@ -3,7 +3,7 @@
 """
 File: base.py
 Desc: This module contains a single class calld Base.
-Author: Gizachew Bayness (Elec Crazy)
+Author: Jerrica Jackson
 Date Created: Aug 6 2022
 """
 from json import dumps as ds

@@ -1,3 +1,2 @@
--- This script list all data in a table
-
-SELECT * FROM first_tables;
+-- This script lists all rows of the table "first_table"
+SELECT * FROM first_table;

@@ -1,3 +1,3 @@
-0-rectangle.js
-
-module.exports = class Rectangle {};
+#!/usr/bin/node
+// Creates an empty, exportable Rectangle class
+module.exports = class Rectangle { };

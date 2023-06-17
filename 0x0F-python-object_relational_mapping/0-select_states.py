@@ -1,30 +1,29 @@
 #!/usr/bin/python3
-'''Define get function'''
-import MySQLdb
+
+"""
+Lists all states from the states table of database hbtn_0e_0_usa.
+Usage: ./0-select_states.py <username> \
+                            <password> \
+                             <database-name>
+"""
+import sys
+import MySQLdb as db
 
 
-def main():
-    # 3 arguments take in
-    # make a connection
-    db = MySQLdb.connect(host='localhost',
-                         port=3306,
-                         user=argv[1],
-                         passwd=argv[2],
-                         database=argv[3])
+def connect_and_query() -> None:
 
-    # create a cursor
-    c = db.cursor()
+    """Connect to the database and execute query"""
+    try:
+        cnx = db.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+        cursor = cnx.cursor(cursorclass=db.cursors.Cursor)
+        cursor.execute('SELECT * FROM states ORDER BY `id` ASC;')
+        states = cursor.fetchall()
 
-    # execute query
-    c.execute('SELECT * FROM states ORDER BY id ASC')
-    rows = c.fetchall()
-    for i in rows:
-        print(i)
+        for state in states:
+            print(state)
+    except Exception as e:
+        return (e)
 
-    # close all cursor and database
-    c.close()
-    db.close()
 
 if __name__ == "__main__":
-    from sys import argv
-    main()
+    connect_and_query()

@@ -1,24 +1,29 @@
 #!/usr/bin/node
-const process = require('process');
-const request = require('request');
-const requestURL = String(process.argv[2]);
+/*
+ * given user id, show the number of completed tasks (API)
+ */
 
-request(requestURL, function (error, response, body) {
-  if (error) {
-    console.log(error);
+const request = require('request');
+const arg = process.argv;
+
+request(arg[2], function (err, res, tbd) {
+  if (err) {
+    console.error(err);
+  }
+  if (res.statusCode === 200) {
+    const completed = {};
+    const tks = JSON.parse(tbd);
+    for (let i = 0; i < tks.length; i++) {
+      if (tks[i].completed === true) {
+        if (completed[tks[i].userId] === undefined) {
+          completed[tks[i].userId] = 1;
+        } else {
+          completed[tks[i].userId]++;
+        }
+      }
+    }
+    console.log(completed);
   } else {
-    const listTodo = JSON.parse(body);
-    const users = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0 };
-    for (let index = 0; index < listTodo.length; index++) {
-      if (listTodo[index].completed === true) {
-        users[listTodo[index].userId] += 1;
-      }
-    }
-    for (let index = 0; index < 11; index++) {
-      if (users[index + 1] === 0) {
-        delete users[index + 1];
-      }
-    }
-    console.log(users);
+    console.log('Error');
   }
 });

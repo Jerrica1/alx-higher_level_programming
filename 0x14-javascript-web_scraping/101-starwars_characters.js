@@ -1,26 +1,22 @@
 #!/usr/bin/node
-
+// Prints all characters of a Star Wars movie
 const request = require('request');
-const url = `https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`;
+request(`https://swapi-api.hbtn.io/api/films/${process.argv[2]}`, (error, response, body) => {
+  if (error) throw error;
+  else {
+    send(JSON.parse(body).characters, 0);
+  }
+});
 
-async function get_name(character) {
-	return new Promise(resolve => {
-		request(character[1], function (error, response, body) {
-			if (error) console.log(error);
-			console.log(JSON.parse(body).name);
-		});
-	}
-	);
+function send (person, idx) {
+  if (idx >= person.length) {
+    return;
+  }
+  request(person[idx], (error, response, body) => {
+    if (error) throw error;
+    else {
+      console.log(JSON.parse(body).name);
+      return send(person, ++idx);
+    }
+  });
 }
-
-async function asdf() {
-	return request(url, function (err, response, body) {
-		if (err) console.log(err);
-		let characters = JSON.parse(body).characters;
-		for (let character of characters) {
-			await get_name(character);
-		}
-	});
-}
-
-asdf

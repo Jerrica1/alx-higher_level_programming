@@ -1,26 +1,24 @@
 #!/usr/bin/node
-
+const process = require('process');
 const request = require('request');
+const requestURL = String(process.argv[2]);
 
-const url = process.argv[2];
-
-request(url, (err, res, body) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-
-  const tasks = JSON.parse(body);
-  const completedTasks = {};
-  tasks.forEach((task) => {
-    if (task.completed) {
-      if (completedTasks[task.userId]) {
-        completedTasks[task.userId]++;
-      } else {
-        completedTasks[task.userId] = 1;
+request(requestURL, function (error, response, body) {
+  if (error) {
+    console.log(error);
+  } else {
+    const listTodo = JSON.parse(body);
+    const users = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0 };
+    for (let index = 0; index < listTodo.length; index++) {
+      if (listTodo[index].completed === true) {
+        users[listTodo[index].userId] += 1;
       }
     }
-  });
-
-  console.log(completedTasks);
+    for (let index = 0; index < 11; index++) {
+      if (users[index + 1] === 0) {
+        delete users[index + 1];
+      }
+    }
+    console.log(users);
+  }
 });
